@@ -96,6 +96,22 @@ async def play(ctx, url):
     player.start()
     await client.say('Here The music')
 
+@client.command(pass_context=True)
+async def pause(ctx):
+    id = ctx.message.server.id
+    players[id].pause()
+
+@client.command(pass_context=True)
+async def pause(ctx):
+    id = ctx.message.server.id
+    players[id].stop()
+
+@client.command(pass_context=True)
+async def pause(ctx):
+    id = ctx.message.server.id
+    players[id].resume()        
+
+
 
 
 
